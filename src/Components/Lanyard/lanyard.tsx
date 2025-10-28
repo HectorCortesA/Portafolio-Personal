@@ -286,6 +286,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
       </group>
       <mesh ref={band}>
         <meshLineGeometry />
+
         <meshLineMaterial
           color="white"
           depthTest={false}

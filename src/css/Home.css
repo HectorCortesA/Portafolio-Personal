@@ -10,7 +10,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
-  font-family: "Arial", sans-serif;
 }
 
 /* Lanyard IZQUIERDA */
@@ -24,29 +23,29 @@
 .Title {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Alineado a la derecha */
+  align-items: flex-end;
   width: 45%;
-  text-align: right; /* Texto alineado a la derecha */
+  text-align: right;
 }
 
 .Title h2 {
-  font-size: 4rem;
+  font-size: 1rem;
   font-family: "Hagrid", sans-serif;
   color: #ffffff;
-  margin-bottom: 1.5rem;
+  margin-bottom: rem;
   font-weight: 300;
   letter-spacing: 2px;
 }
 
 .Title h1 {
-  font-size: 10rem;
+  font-size: 2.8rem;
   font-family: "Hagrid", sans-serif;
   font-weight: 800;
   color: #ffffff;
   margin: 0.3rem 0;
   line-height: 1.1;
   text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: 1.5px;
 }
 
 /* Efectos */
@@ -60,26 +59,34 @@
 @media (max-width: 768px) {
   .Menu {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Cambiado para mejor alineación */
     text-align: center;
+    padding: 2rem 5%;
   }
 
+  /* Lanyard ARRIBA en móvil */
+  .lanyard-wrapper {
+    width: 500px; /* Ancho fijo */
+    height: 400px; /* Reducido un poco para dar espacio al texto */
+    order: 1; /* Primera posición */
+    margin-bottom: 0rem;
+  }
+
+  /* Textos ABAJO en móvil */
   .Title {
     width: 100%;
     align-items: center;
-    text-align: center; /* Centrado en móvil */
-    margin-bottom: 2rem;
-    order: 2; /* Texto abajo en móvil */
+    text-align: center;
+    order: 2; /* Segunda posición */
+    margin-bottom: 0;
   }
 
   .Title h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Tamaño más apropiado para móvil */
   }
 
-  .lanyard-wrapper {
-    width: 100%;
-    height: 50vh;
-    order: 1; /* Lanyard arriba en móvil */
+  .Title h2 {
+    font-size: 1rem;
   }
 }
 
@@ -91,7 +98,6 @@
   font-display: swap;
 }
 
-/* Hagrid Font Family - Regular Italic */
 @font-face {
   font-family: "Hagrid";
   src: url("../assets/fonts/hagrid/Hagrid-Italic.ttf") format("truetype");
@@ -100,7 +106,6 @@
   font-display: swap;
 }
 
-/* Hagrid Font Family - Extrabold */
 @font-face {
   font-family: "Hagrid";
   src: url("../assets/fonts/hagrid/Hagrid-Extrabold.ttf") format("truetype");
@@ -109,7 +114,6 @@
   font-display: swap;
 }
 
-/* Hagrid Font Family - Extrabold Italic */
 @font-face {
   font-family: "Hagrid";
   src: url("../assets/fonts/hagrid/Hagrid-Extrabold-Italic.ttf")
