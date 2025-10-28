@@ -1,0 +1,120 @@
+.Menu {
+  background: linear-gradient(
+    113deg,
+    #3b5f79 0.96%,
+    #497797 54.05%,
+    #6db0df 100%
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  font-family: "Arial", sans-serif;
+}
+
+/* Lanyard IZQUIERDA */
+.lanyard-wrapper {
+  width: 45%;
+  height: 100vh;
+  position: relative;
+}
+
+/* Columna de texto DERECHA */
+.Title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alineado a la derecha */
+  width: 45%;
+  text-align: right; /* Texto alineado a la derecha */
+}
+
+.Title h2 {
+  font-size: 4rem;
+  font-family: "Hagrid", sans-serif;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.Title h1 {
+  font-size: 10rem;
+  font-family: "Hagrid", sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0.3rem 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+/* Efectos */
+.Title h1:hover {
+  color: #000000;
+  transition: color 0.3s ease;
+  cursor: default;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .Menu {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .Title {
+    width: 100%;
+    align-items: center;
+    text-align: center; /* Centrado en móvil */
+    margin-bottom: 2rem;
+    order: 2; /* Texto abajo en móvil */
+  }
+
+  .Title h1 {
+    font-size: 2.5rem;
+  }
+
+  .lanyard-wrapper {
+    width: 100%;
+    height: 50vh;
+    order: 1; /* Lanyard arriba en móvil */
+  }
+}
+
+@font-face {
+  font-family: "Hagrid";
+  src: url("../assets/fonts/hagrid/Hagrid-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Hagrid Font Family - Regular Italic */
+@font-face {
+  font-family: "Hagrid";
+  src: url("../assets/fonts/hagrid/Hagrid-Italic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Hagrid Font Family - Extrabold */
+@font-face {
+  font-family: "Hagrid";
+  src: url("../assets/fonts/hagrid/Hagrid-Extrabold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Hagrid Font Family - Extrabold Italic */
+@font-face {
+  font-family: "Hagrid";
+  src: url("../assets/fonts/hagrid/Hagrid-Extrabold-Italic.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
