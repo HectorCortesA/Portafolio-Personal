@@ -1,22 +1,29 @@
-.Menu {
+body {
   background: linear-gradient(
     113deg,
     #3b5f79 0.96%,
     #497797 54.05%,
     #6db0df 100%
   );
+  margin: 0;
+  padding: 0;
+}
+.Menu {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
+  position: relative;
 }
 
-/* Lanyard IZQUIERDA */
-.lanyard-wrapper {
+/* Contenedor para el ProfileCard */
+.profile-card-container {
   width: 45%;
-  height: 100vh;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 /* Columna de texto DERECHA */
@@ -29,28 +36,30 @@
 }
 
 .Title h2 {
-  font-size: 1rem;
+  font-size: 2rem;
   font-family: "Hagrid", sans-serif;
   color: #ffffff;
-  margin-bottom: rem;
+  margin-bottom: 1rem;
   font-weight: 300;
   letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .Title h1 {
-  font-size: 2.8rem;
+  font-size: 3.5rem;
   font-family: "Hagrid", sans-serif;
   font-weight: 800;
   color: #ffffff;
-  margin: 0.3rem 0;
+  margin: 0.5rem 0;
   line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Efectos */
 .Title h1:hover {
-  color: #000000;
+  color: #a8d8ff;
   transition: color 0.3s ease;
   cursor: default;
 }
@@ -59,37 +68,38 @@
 @media (max-width: 768px) {
   .Menu {
     flex-direction: column;
-    justify-content: flex-start; /* Cambiado para mejor alineación */
+    justify-content: flex-start;
     text-align: center;
     padding: 2rem 5%;
   }
 
-  /* Lanyard ARRIBA en móvil */
-  .lanyard-wrapper {
-    width: 500px; /* Ancho fijo */
-    height: 400px; /* Reducido un poco para dar espacio al texto */
-    order: 1; /* Primera posición */
-    margin-bottom: 0rem;
+  /* ProfileCard ARRIBA en móvil con padding top */
+  .profile-card-container {
+    width: 100%;
+    order: 1; /* Primera posición (ARRIBA) */
+    padding-top: 6rem; /* Padding top para bajar la imagen */
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
-  /* Textos ABAJO en móvil */
+  /* Textos ABAJO del ProfileCard en móvil */
   .Title {
     width: 100%;
     align-items: center;
     text-align: center;
-    order: 2; /* Segunda posición */
-    margin-bottom: 0;
+    order: 2; /* Segunda posición (ABAJO) */
   }
 
   .Title h1 {
-    font-size: 2rem; /* Tamaño más apropiado para móvil */
+    font-size: 2rem;
   }
 
   .Title h2 {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 
+/* Fuentes */
 @font-face {
   font-family: "Hagrid";
   src: url("../assets/fonts/hagrid/Hagrid-Regular.ttf") format("truetype");
