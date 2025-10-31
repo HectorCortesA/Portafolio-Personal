@@ -1,0 +1,68 @@
+body {
+  background: linear-gradient(181deg, #0c0a0a 0.85%, #726060 99.14%);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+.UI {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  width: 100%;
+}
+.dates h1 {
+  display: flex;
+  padding-left: 30px;
+  font-family: "Hagrid", sans-serif;
+  font-weight: 800;
+  font-size: 1.9rem;
+  color: white;
+  letter-spacing: 0.5px;
+  padding-top: 120px;
+  padding-bottom: 30px;
+}
+.dates p {
+  font-family: "Hagrid", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  color: white;
+  letter-spacing: 2px;
+  margin: 10px;
+  padding-inline-start: 60px;
+  padding-inline-end: 60px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "Hagrid";
+  src: url("../assets/fonts/hagrid/Hagrid-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hagrid";
+  src: url("../assets/fonts/hagrid/Hagrid-Italic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hagrid";
+  src: url("../assets/fonts/hagrid/Hagrid-Extrabold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hagrid";
+  src: url("../assets/fonts/hagrid/Hagrid-Extrabold-Italic.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}

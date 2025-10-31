@@ -398,9 +398,9 @@ class Media {
     }
     this.scale = this.screen.height / 1500;
     this.plane.scale.y =
-      (this.viewport.height * (900 * this.scale)) / this.screen.height;
+      (this.viewport.height * (844 * this.scale)) / this.screen.height;
     this.plane.scale.x =
-      (this.viewport.width * (700 * this.scale)) / this.screen.width;
+      (this.viewport.width * (390 * this.scale)) / this.screen.width;
     this.plane.program.uniforms.uPlaneSizes.value = [
       this.plane.scale.x,
       this.plane.scale.y,
@@ -475,7 +475,10 @@ class App {
     this.createScene();
     this.onResize();
     this.createGeometry();
+
+    // ✅ CAMBIO IMPORTANTE: Usar SOLO las imágenes que vienen por props
     this.createMedias(items, bend, textColor, borderRadius, font);
+
     this.update();
     this.addEventListeners();
   }
@@ -515,58 +518,16 @@ class App {
     borderRadius: number,
     font: string
   ) {
-    const defaultItems = [
-      {
-        image: `https://picsum.photos/seed/1/800/600?grayscale`,
-        text: "Bridge",
-      },
-      {
-        image: `https://picsum.photos/seed/2/800/600?grayscale`,
-        text: "Desk Setup",
-      },
-      {
-        image: `https://picsum.photos/seed/3/800/600?grayscale`,
-        text: "Waterfall",
-      },
-      {
-        image: `https://picsum.photos/seed/4/800/600?grayscale`,
-        text: "Strawberries",
-      },
-      {
-        image: `https://picsum.photos/seed/5/800/600?grayscale`,
-        text: "Deep Diving",
-      },
-      {
-        image: `https://picsum.photos/seed/16/800/600?grayscale`,
-        text: "Train Track",
-      },
-      {
-        image: `https://picsum.photos/seed/17/800/600?grayscale`,
-        text: "Santorini",
-      },
-      {
-        image: `https://picsum.photos/seed/8/800/600?grayscale`,
-        text: "Blurry Lights",
-      },
-      {
-        image: `https://picsum.photos/seed/9/800/600?grayscale`,
-        text: "New York",
-      },
-      {
-        image: `https://picsum.photos/seed/10/800/600?grayscale`,
-        text: "Good Boy",
-      },
-      {
-        image: `https://picsum.photos/seed/21/800/600?grayscale`,
-        text: "Coastline",
-      },
-      {
-        image: `https://picsum.photos/seed/12/800/600?grayscale`,
-        text: "Palm Trees",
-      },
-    ];
-    const galleryItems = items && items.length ? items : defaultItems;
-    this.mediasImages = galleryItems.concat(galleryItems);
+    // ✅ CAMBIO CRÍTICO: Si no hay items, usar array vacío o mostrar mensaje
+    if (!items || items.length === 0) {
+      console.warn("No items provided to CircularGallery");
+      this.mediasImages = [];
+      this.medias = [];
+      return;
+    }
+
+    // ✅ Usar SOLO los items que vienen por props
+    this.mediasImages = items.concat(items); // Duplicar para efecto infinito
     this.medias = this.mediasImages.map((data, index) => {
       return new Media({
         geometry: this.planeGeometry,
@@ -587,6 +548,7 @@ class App {
     });
   }
 
+  // ... (el resto de los métodos se mantienen igual)
   onTouchDown(e: MouseEvent | TouchEvent) {
     this.isDown = true;
     this.scroll.position = this.scroll.current;
@@ -710,7 +672,7 @@ interface CircularGalleryProps {
 }
 
 export default function CircularGallery({
-  items,
+  items = [], // ✅ Valor por defecto vacío
   bend = 3,
   textColor = "#ffffff",
   borderRadius = 0.05,
@@ -736,13 +698,3 @@ export default function CircularGallery({
   }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
   return <div className="circular-gallery" ref={containerRef} />;
 }
-
-/*
-
-import CircularGallery from './CircularGallery'
-
-<div style={{ height: '600px', position: 'relative' }}>
-  <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
-</div>
-
-*/
