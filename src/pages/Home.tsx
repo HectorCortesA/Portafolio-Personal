@@ -1,4 +1,4 @@
-import "../css/home.css";
+import "../css/Home.css";
 import ProfileCard from "../Components/ProfileCard/ProfileCard";
 import BubbleMenu from "../Components/BubbleMenu/BubbleMenu";
 
