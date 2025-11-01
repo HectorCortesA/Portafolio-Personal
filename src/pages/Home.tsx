@@ -6,7 +6,7 @@ function Home() {
   const items = [
     {
       label: "Home",
-      href: "#",
+      href: "/",
       ariaLabel: "Home",
       rotation: -8,
       hoverStyles: { bgColor: "#3b82f6", textColor: "#ffffff" },
@@ -27,7 +27,7 @@ function Home() {
     },
     {
       label: "UI",
-      href: "#",
+      href: "/ui",
       ariaLabel: "Blog",
       rotation: 8,
       hoverStyles: { bgColor: "#ef4444", textColor: "#ffffff" },

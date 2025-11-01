@@ -1,6 +1,7 @@
 import type { CSSProperties, ReactNode } from "react";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { Link } from "react-router-dom";
 
 import "./BubbleMenu.css";
 
@@ -33,35 +34,35 @@ export type BubbleMenuProps = {
 const DEFAULT_ITEMS: MenuItem[] = [
   {
     label: "home",
-    href: "#",
+    href: "/",
     ariaLabel: "Home",
     rotation: -8,
     hoverStyles: { bgColor: "#3b82f6", textColor: "#ffffff" },
   },
   {
     label: "about",
-    href: "#",
+    href: "/about", // ✅ Ruta correcta
     ariaLabel: "About",
     rotation: 8,
     hoverStyles: { bgColor: "#10b981", textColor: "#ffffff" },
   },
   {
     label: "projects",
-    href: "#",
-    ariaLabel: "Documentation",
+    href: "/projects", // ✅ Ruta correcta
+    ariaLabel: "Projects",
     rotation: 8,
     hoverStyles: { bgColor: "#f59e0b", textColor: "#ffffff" },
   },
   {
     label: "blog",
-    href: "#",
+    href: "/blog", // ✅ Ruta correcta
     ariaLabel: "Blog",
     rotation: 8,
     hoverStyles: { bgColor: "#ef4444", textColor: "#ffffff" },
   },
   {
     label: "contact",
-    href: "#",
+    href: "/contact", // ✅ Ruta correcta
     ariaLabel: "Contact",
     rotation: -8,
     hoverStyles: { bgColor: "#8b5cf6", textColor: "#ffffff" },
@@ -232,9 +233,10 @@ export default function BubbleMenu({
           <ul className="pill-list" role="menu" aria-label="Menu links">
             {menuItems.map((item, idx) => (
               <li key={idx} role="none" className="pill-col">
-                <a
+                {/* ✅ CAMBIO CRÍTICO: Reemplaza <a> por <Link> */}
+                <Link
                   role="menuitem"
-                  href={item.href}
+                  to={item.href} // ✅ Usa "to" en lugar de "href"
                   aria-label={item.ariaLabel || item.label}
                   className="pill-link"
                   style={
@@ -248,8 +250,9 @@ export default function BubbleMenu({
                     } as CSSProperties
                   }
                   ref={(el) => {
-                    if (el) bubblesRef.current[idx] = el;
+                    if (el) bubblesRef.current[idx] = el as HTMLAnchorElement;
                   }}
+                  onClick={() => setIsMenuOpen(false)} // ✅ Cierra el menú al hacer clic
                 >
                   <span
                     className="pill-label"
@@ -259,7 +262,7 @@ export default function BubbleMenu({
                   >
                     {item.label}
                   </span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
