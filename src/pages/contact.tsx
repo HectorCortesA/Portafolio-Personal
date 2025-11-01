@@ -1,6 +1,6 @@
 import "../css/contact.css";
 import BubbleMenu from "../Components/BubbleMenu/BubbleMenu";
-import perfil from "../assets/background/yo.png";
+import perfil from "../assets/background/yo.jpg";
 
 function contact() {
   const items = [
