@@ -47,9 +47,9 @@ const items = [
     hoverStyles: { bgColor: "#f59e0b", textColor: "#ffffff" },
   },
   {
-    label: "UI",
+    label: "UI Designs",
     href: "/ui",
-    ariaLabel: "Blog",
+    ariaLabel: "UI Designs",
     rotation: 8,
     hoverStyles: { bgColor: "#ef4444", textColor: "#ffffff" },
   },

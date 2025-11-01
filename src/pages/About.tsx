@@ -25,9 +25,9 @@ function About() {
       hoverStyles: { bgColor: "#f59e0b", textColor: "#ffffff" },
     },
     {
-      label: "UI",
+      label: "UI Designs",
       href: "/ui",
-      ariaLabel: "Blog",
+      ariaLabel: "UI Designs",
       rotation: 8,
       hoverStyles: { bgColor: "#ef4444", textColor: "#ffffff" },
     },
@@ -41,7 +41,7 @@ function About() {
   ];
 
   return (
-    <div className="Menu">
+    <div className="about">
       <BubbleMenu
         logo={<span style={{ fontWeight: 700 }}>HC</span>}
         items={items}
@@ -53,7 +53,9 @@ function About() {
         animationDuration={0.5}
         staggerDelay={0.12}
       />
-      <h1>Proximamente</h1>
+      <div className="content">
+        <h1>Proximamente</h1>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,118 @@
+.projects {
+  background: linear-gradient(180deg, #192229 0%, #56768f 100%);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.content h1 {
+  font-family: "Hagrid", sans-serif;
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: -1px;
+
+  /* Efectos de sombra */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2),
+    0 8px 16px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 255, 255, 0.1);
+
+  /* Transición suave para hover */
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover opcional */
+.content h1:hover {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.3),
+    0 12px 24px rgba(0, 0, 0, 0.2), 0 0 40px rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Media Queries para Responsive */
+@media (max-width: 1200px) {
+  .content h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 0 15px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+
+    /* Ajustar sombras para móvil */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 0 10px;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+    letter-spacing: -0.3px;
+
+    /* Sombra más sutil para móvil */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 360px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+}
+
+@font-face {
+  font-family: "Hagrid";
+  src: url("../assets/fonts/hagrid/Hagrid-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hagrid";
+  src: url("../assets/fonts/hagrid/Hagrid-Italic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hagrid";
+  src: url("../assets/fonts/hagrid/Hagrid-Extrabold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hagrid";
+  src: url("../assets/fonts/hagrid/Hagrid-Extrabold-Italic.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}

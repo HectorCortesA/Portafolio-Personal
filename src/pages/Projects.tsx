@@ -12,35 +12,35 @@ function Projects() {
     },
     {
       label: "About",
-      href: "#",
+      href: "/about",
       ariaLabel: "About",
       rotation: 8,
       hoverStyles: { bgColor: "#10b981", textColor: "#ffffff" },
     },
     {
       label: "Projects",
-      href: "#",
+      href: "/projects",
       ariaLabel: "Projects",
       rotation: 8,
       hoverStyles: { bgColor: "#f59e0b", textColor: "#ffffff" },
     },
     {
-      label: "UI",
+      label: "UI Designs",
       href: "/ui",
-      ariaLabel: "Blog",
+      ariaLabel: "UI Designs",
       rotation: 8,
       hoverStyles: { bgColor: "#ef4444", textColor: "#ffffff" },
     },
     {
       label: "contact",
-      href: "#",
+      href: "/contact",
       ariaLabel: "Contact",
       rotation: -8,
       hoverStyles: { bgColor: "#8b5cf6", textColor: "#ffffff" },
     },
   ];
   return (
-    <div className="Menu">
+    <div className="projects">
       <BubbleMenu
         logo={<span style={{ fontWeight: 700 }}>HC</span>}
         items={items}
@@ -52,7 +52,9 @@ function Projects() {
         animationDuration={0.5}
         staggerDelay={0.12}
       />
-      <h1>Proximamente</h1>
+      <div className="content">
+        <h1>Proximamente</h1>
+      </div>
     </div>
   );
 }
