@@ -13,14 +13,14 @@ function Home() {
     },
     {
       label: "About",
-      href: "#",
+      href: "/about",
       ariaLabel: "About",
       rotation: 8,
       hoverStyles: { bgColor: "#10b981", textColor: "#ffffff" },
     },
     {
       label: "Projects",
-      href: "#",
+      href: "/projects",
       ariaLabel: "Projects",
       rotation: 8,
       hoverStyles: { bgColor: "#f59e0b", textColor: "#ffffff" },
@@ -34,7 +34,7 @@ function Home() {
     },
     {
       label: "contact",
-      href: "#",
+      href: "/contact",
       ariaLabel: "Contact",
       rotation: -8,
       hoverStyles: { bgColor: "#8b5cf6", textColor: "#ffffff" },
