@@ -115,6 +115,14 @@ function UI() {
           diversión y tecnología en una experiencia visualmente envolvente y
           memorable.
         </p>
+        <div className="btn-figma">
+          <a
+            href="https://www.figma.com/proto/0sxUs3octQTchp5wOhlyQe/MoviesInvitedWallet?page-id=0%3A1&node-id=160-171&viewport=532%2C59%2C0.32&t=OXIaN4uxXe2aF2HN-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=98%3A31"
+            className="glowbutton-DT"
+          >
+            DatesCupon Probar
+          </a>
+        </div>
         <div className="scrollimages1">
           <div style={{ height: "600px", position: "relative" }}>
             <CircularGallery
@@ -149,6 +157,14 @@ function UI() {
           Una experiencia llena de nostalgia, diseño y cariño para los amantes
           del mundo Pokémon.
         </p>
+        <div className="btn-figma">
+          <a
+            href="https://www.figma.com/proto/7Vw51ONmgoDZhC85PZoAM4/Pokedex?page-id=0%3A1&node-id=1-3&p=f&viewport=111%2C235%2C0.34&t=n3oVOlhPw9UygWd7-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A3"
+            className="glowbutton-PK"
+          >
+            Pokedex Probar
+          </a>
+        </div>
         <div className="scrollimages2">
           <div style={{ height: "600px", position: "relative" }}>
             <CircularGallery
@@ -179,6 +195,14 @@ function UI() {
           <br />
           Porque cocinar también puede ser una experiencia digital deliciosa
         </p>
+        <div className="btn-figma">
+          <a
+            href="https://www.figma.com/proto/0a3QeULT4uMG01j6pLuMz4/Recetario?page-id=0%3A1&node-id=8-18&viewport=101%2C626%2C0.41&t=K5GZGMOrtg4dk1VX-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2002%3A3"
+            className="glowbutton-RC"
+          >
+            Recetario Probar
+          </a>
+        </div>
         <div className="scrollimages3">
           <div style={{ height: "600px", position: "relative" }}>
             <CircularGallery
