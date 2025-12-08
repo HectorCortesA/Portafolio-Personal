@@ -74,7 +74,7 @@ function Home() {
           showUserInfo={true}
           enableTilt={true}
           enableMobileTilt={false}
-          onContactClick={() => console.log("Contact clicked")}
+          onContactClick={() => (window.location.href = "/contact")}
         />
       </div>
     </div>
