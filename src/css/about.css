@@ -1,5 +1,5 @@
 .about {
-  background: linear-gradient(180deg, #2c1f30 0%, #896296 100%);
+  background: url("../assets/background/bosque.jpg") no-repeat center center;
   background-attachment: fixed;
   margin: 0;
   padding: 0;
@@ -10,35 +10,72 @@
   overflow-x: hidden;
 }
 
-.content {
+.Profile {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  padding: 0 20px;
+  padding-left: 171px;
 }
 
-.content h1 {
+.Profile img {
+  width: 530px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.Content-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 93px;
+  padding-top: 100px;
+}
+
+.Description {
+  max-width: 800px;
+  text-align: left;
   font-family: "Hagrid", sans-serif;
+  font-weight: 400;
   color: #ffffff;
-  font-size: 4rem;
-  font-weight: 800;
-  text-align: center;
-  letter-spacing: -1px;
-
-  /* Efectos de sombra */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2),
-    0 8px 16px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 255, 255, 0.1);
-
-  /* Transición suave para hover */
-  transition: all 0.3s ease;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.591);
 }
 
-/* Efecto hover opcional */
-.content h1:hover {
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.3),
-    0 12px 24px rgba(0, 0, 0, 0.2), 0 0 40px rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
+.btn-cv {
+  padding-top: 40px;
+}
+
+.btn-cv a {
+  padding: 10px 40px;
+  font-family: "Hagrid", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  gap: 10px;
+  color: white;
+  border-radius: 10px;
+  background: #165b74;
+  text-decoration: none; /* Quita la línea del enlace */
+  display: inline-block;
+  transition: all 0.3s ease; /* Transición suave para efectos */
+  cursor: pointer;
+  border: 2px solid transparent; /* Borde transparente para efecto hover */
+}
+
+/* Efectos para el enlace */
+.btn-cv a:hover {
+  background: #1d6f8b; /* Color más claro al pasar el mouse */
+  transform: translateY(-3px); /* Efecto de levantar */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra al pasar el mouse */
+  border-color: rgba(255, 255, 255, 0.2); /* Borde sutil */
+}
+
+.btn-cv a:active {
+  transform: translateY(-1px); /* Efecto al hacer clic */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Media Queries para Responsive */
@@ -56,10 +93,6 @@
   .content h1 {
     font-size: 2rem;
     letter-spacing: -0.5px;
-
-    /* Ajustar sombras para móvil */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3),
-      0 0 20px rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -71,16 +104,105 @@
   .content h1 {
     font-size: 2.5rem;
     letter-spacing: -0.3px;
-
-    /* Sombra más sutil para móvil */
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.3),
       0 0 15px rgba(255, 255, 255, 0.1);
   }
 }
 
-@media (max-width: 360px) {
-  .content h1 {
-    font-size: 2rem;
+@media (max-width: 1024px) {
+  .Profile {
+    padding-left: 50px;
+    justify-content: flex-start;
+  }
+
+  .Profile img {
+    width: 450px;
+    height: 500px;
+  }
+
+  .Content-1 {
+    padding-right: 50px;
+    padding-top: 80px;
+  }
+
+  .Description {
+    max-width: 600px;
+    font-size: 17px;
+  }
+
+  .btn-cv a {
+    padding: 10px 35px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 900px) {
+  .Profile {
+    padding-left: 30px;
+  }
+
+  .Profile img {
+    width: 400px;
+    height: 450px;
+  }
+
+  .Content-1 {
+    padding-right: 30px;
+  }
+
+  .Description {
+    max-width: 500px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Profile img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 280px;
+    height: 320px;
+  }
+
+  .Content-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+  }
+
+  .Description {
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  .btn-cv {
+    padding-top: 25px;
+  }
+
+  .btn-cv a {
+    padding: 8px 25px;
+    font-size: 18px;
+  }
+
+  /* Efectos específicos para móvil */
+  .btn-cv a:hover {
+    transform: translateY(-2px); /* Efecto más suave en móvil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-cv a:active {
+    transform: translateY(0); /* Menos movimiento en móvil */
   }
 }
 

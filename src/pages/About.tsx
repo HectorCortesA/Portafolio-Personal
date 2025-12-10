@@ -1,5 +1,6 @@
 import "../css/about.css";
 import BubbleMenu from "../Components/BubbleMenu/BubbleMenu";
+import foto from "../assets/background/ProfileAbout.png";
 
 function About() {
   const items = [
@@ -54,7 +55,23 @@ function About() {
         staggerDelay={0.12}
       />
       <div className="content">
-        <h1>Proximamente</h1>
+        <div className="Profile">
+          <img src={foto} alt="Hector Cortes" />
+        </div>
+        <div className="Content-1">
+          <div className="Description">
+            <p>
+              Soy Hector Cortes, Programador Developer mobile y Diseñador UI &
+              UX, Actualmente Soy estudiante de Ingeniería Ciencias de la
+              Computación
+            </p>
+          </div>
+          <div className="btn-cv">
+            <a href="https://drive.google.com/file/d/1fv4t5lLWD-XU1_Y9x_Di4ezFT6IZXdWr/view?usp=sharing">
+              DESCARGAR CV
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
