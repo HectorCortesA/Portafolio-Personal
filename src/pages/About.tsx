@@ -1,6 +1,9 @@
 import "../css/about.css";
 import BubbleMenu from "../Components/BubbleMenu/BubbleMenu";
 import foto from "../assets/background/ProfileAbout.png";
+import insta from "../assets/img/social/instagram.svg";
+import x from "../assets/img/social/twitter.svg";
+import githud from "../assets/img/social/github.svg";
 
 function About() {
   const items = [
@@ -69,6 +72,17 @@ function About() {
           <div className="btn-cv">
             <a href="https://drive.google.com/file/d/1fv4t5lLWD-XU1_Y9x_Di4ezFT6IZXdWr/view?usp=sharing">
               DESCARGAR CV
+            </a>
+          </div>
+          <div className="Redes">
+            <a href="https://www.instagram.com/hector.crts/">
+              <img src={insta} alt="Instagram" />
+            </a>
+            <a href="https://x.com/HectordroidG">
+              <img src={x} alt="X Twitter" />
+            </a>
+            <a href="https://github.com/HectorCortesA">
+              <img src={githud} alt="GitHub" />
             </a>
           </div>
         </div>

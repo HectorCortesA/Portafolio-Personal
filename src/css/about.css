@@ -1,6 +1,5 @@
 .about {
-  background: url("../assets/background/bosque.jpg") no-repeat center center;
-  background-attachment: fixed;
+  position: relative; /* Necesario para el pseudo-elemento */
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -8,6 +7,35 @@
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  background: none; /* Removemos el background del contenedor principal */
+}
+
+/* Pseudo-elemento para el fondo con blur */
+.about::before {
+  content: "";
+  position: fixed; /* Fijamos el fondo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/background/bosque.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(8px); /* Ajusta este valor para más/menos blur */
+  z-index: -1; /* Envía el fondo detrás del contenido */
+  transform: scale(1.05); /* Ayuda a cubrir bordes del blur */
+}
+
+/* Si quieres agregar una capa oscura sobre el blur para mejor legibilidad */
+.about::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Oscurece el fondo para mejor contraste */
+  z-index: -1; /* Detrás del contenido pero sobre el blur */
 }
 
 .Profile {
@@ -42,7 +70,7 @@
   line-height: 1.6;
   letter-spacing: 0.5px;
   margin-top: 20px;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.591);
+  text-shadow: 2px 4px 8px rgb(0, 0, 0);
 }
 
 .btn-cv {
@@ -63,6 +91,7 @@
   transition: all 0.3s ease; /* Transición suave para efectos */
   cursor: pointer;
   border: 2px solid transparent; /* Borde transparente para efecto hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Efectos para el enlace */
@@ -78,6 +107,26 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+.Redes {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end; /* Alinea a la derecha */
+  gap: 20px;
+  padding-top: 30px;
+  position: absolute; /* Posiciona absolutamente */
+  bottom: 30px; /* Lo coloca en la parte inferior */
+  right: 93px; /* Lo coloca a la derecha con el mismo padding que Content-1 */
+  width: auto;
+}
+
+.Redes a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 255, 255, 0.05);
+}
+.Redes a:active {
+  transform: translateY(-2px) scale(0.95);
+  transition: transform 0.1s ease;
+}
 /* Media Queries para Responsive */
 @media (max-width: 1200px) {
   .content h1 {
@@ -176,6 +225,7 @@
     flex-direction: column;
     align-items: center;
     padding: 10px 0px;
+    position: relative;
   }
 
   .Description {
@@ -203,6 +253,18 @@
 
   .btn-cv a:active {
     transform: translateY(0); /* Menos movimiento en móvil */
+  }
+  .Redes {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los iconos */
+    gap: 20px;
+    position: static; /* Cambia de absolute a static para flujo normal */
+    bottom: auto; /* Quita posicionamiento absoluto */
+    right: auto; /* Quita posicionamiento absoluto */
+    margin-top: 30px; /* Espacio arriba */
+    padding-top: 20px; /* Espacio interno arriba */
+    width: 100%; /* Ocupa todo el ancho */
   }
 }
 
