@@ -2,16 +2,16 @@ import "../css/UI.css";
 import CircularGallery from "../Components/CircularGallery/CircularGalerry";
 import BubbleMenu from "../Components/BubbleMenu/BubbleMenu";
 
-import addWallet from "../assets/img/dates/addWallet.png";
-import Calendario from "../assets/img/dates/Calendario.png";
-import Cupon from "../assets/img/dates/Cupon.png";
-import DateCupon from "../assets/img/dates/DateCupon.png";
-import DatePelicula from "../assets/img/dates/DatePelicula.png";
-import EditarPerfil from "../assets/img/dates/EditarPerfil.png";
-import Home from "../assets/img/dates/Home.png";
-import login from "../assets/img/dates/login.png";
-import Perfil from "../assets/img/dates/Perfil.png";
-import register from "../assets/img/dates/register.png";
+import addWallet from "../assets/img/dates/addWallet.webp";
+import Calendario from "../assets/img/dates/Calendario.webp";
+import Cupon from "../assets/img/dates/Cupon.webp";
+import DateCupon from "../assets/img/dates/DateCupon.webp";
+import DatePelicula from "../assets/img/dates/DatePelicula.webp";
+import EditarPerfil from "../assets/img/dates/EditarPerfil.webp";
+import Home from "../assets/img/dates/Home.webp";
+import login from "../assets/img/dates/login.webp";
+import Perfil from "../assets/img/dates/Perfil.webp";
+import register from "../assets/img/dates/Registre.webp";
 
 import error from "../assets/img/Pokemon/error.png";
 import Personaje from "../assets/img/Pokemon/Personaje.png";
