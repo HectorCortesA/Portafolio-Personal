@@ -70,7 +70,7 @@ function Home() {
           handle="hector.crts"
           status="Online"
           contactText="Contact Me"
-          avatarUrl="/images/profile.png"
+          avatarUrl="/images/profile.webp"
           showUserInfo={true}
           enableTilt={true}
           enableMobileTilt={false}

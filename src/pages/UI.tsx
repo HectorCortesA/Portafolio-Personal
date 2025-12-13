@@ -13,16 +13,17 @@ import login from "../assets/img/dates/login.webp";
 import Perfil from "../assets/img/dates/Perfil.webp";
 import register from "../assets/img/dates/Registre.webp";
 
-import error from "../assets/img/Pokemon/error.png";
-import Personaje from "../assets/img/Pokemon/Personaje.png";
-import Pokemones from "../assets/img/Pokemon/Pokemones.png";
-import Search from "../assets/img/Pokemon/Search.png";
-import Splash from "../assets/img/Pokemon/Splash .png";
+import error from "../assets/img/Pokemon/error.webp";
+import Personaje from "../assets/img/Pokemon/Personaje.webp";
+import Pokemones from "../assets/img/Pokemon/Pokemones.webp";
+import Search from "../assets/img/Pokemon/Search.webp";
+import Splash from "../assets/img/Pokemon/Splash .webp";
 
-import RecetasHome from "../assets/img/Recetarios/Home.png";
-import RecetasPerfil from "../assets/img/Recetarios/Perfil.png";
-import RecetasRecetas from "../assets/img/Recetarios/Recetas.png";
-import RecetasRegister from "../assets/img/Recetarios/Register.png";
+import RecetasHome from "../assets/img/Recetarios/Home.webp";
+import RecetasPerfil from "../assets/img/Recetarios/Perfil.webp";
+import RecetasRecetas from "../assets/img/Recetarios/Recetas.webp";
+import RecetasRegister from "../assets/img/Recetarios/Register.webp";
+import ReceteasLogin from "../assets/img/Recetarios/login.webp";
 
 const items = [
   {
@@ -86,6 +87,7 @@ const pokemonItems = [
 const recetasItems = [
   { image: RecetasHome, text: "Inicio Recetas" },
   { image: RecetasRecetas, text: "Lista de Recetas" },
+  { image: ReceteasLogin, text: "Login" },
   { image: RecetasPerfil, text: "Perfil" },
   { image: RecetasRegister, text: "Registro" },
 ];
