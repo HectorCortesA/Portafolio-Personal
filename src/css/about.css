@@ -8,6 +8,7 @@
   flex-direction: column;
   overflow-x: hidden;
   background: none;
+  box-sizing: border-box;
 }
 
 /* Pseudo-elemento para el fondo con blur */
@@ -43,19 +44,24 @@
   display: flex;
   flex: 1;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .Profile {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 171px;
   flex: 1;
+  padding-left: 5%; /* Cambiado de px fijo a porcentaje */
+  box-sizing: border-box;
+  max-width: 50%;
 }
 
 .Profile img {
-  width: 530px;
-  height: 600px;
+  width: 90%; /* Cambiado de px fijo a porcentaje */
+  max-width: 530px;
+  height: auto;
+  aspect-ratio: 530/600;
   object-fit: cover;
 }
 
@@ -64,35 +70,40 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-right: 93px;
-  padding-top: 100px;
   flex: 1;
-  position: relative; /* Para posicionar las redes */
+  position: relative;
+  padding-right: 5%; /* Cambiado de px fijo a porcentaje */
+  padding-top: 5%; /* Cambiado de px fijo a porcentaje */
+  box-sizing: border-box;
+  max-width: 50%;
 }
 
 .Description {
-  max-width: 800px;
+  width: 90%; /* Cambiado de max-width fija a porcentaje */
   text-align: left;
   font-family: "Hagrid", sans-serif;
   font-weight: 400;
   color: #ffffff;
-  font-size: 18px;
+  font-size: clamp(16px, 1.8vw, 18px); /* Tamaño responsivo */
   line-height: 1.6;
   letter-spacing: 0.5px;
   margin-top: 20px;
   text-shadow: 2px 4px 8px rgb(0, 0, 0);
+  box-sizing: border-box;
 }
 
 .btn-cv {
   padding-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .btn-cv a {
   padding: 10px 40px;
   font-family: "Hagrid", sans-serif;
   font-weight: 800;
-  font-size: 24px;
-  gap: 10px;
+  font-size: clamp(18px, 2vw, 24px); /* Tamaño responsivo */
   color: white;
   border-radius: 10px;
   background: #165b74;
@@ -102,6 +113,8 @@
   cursor: pointer;
   border: 2px solid transparent;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 /* Efectos para el enlace */
@@ -125,12 +138,189 @@
   gap: 20px;
   position: absolute;
   bottom: 30px;
-  right: 0;
-  width: 100%;
-  padding-right: 93px;
+  right: 5%; /* Cambiado de px fijo a porcentaje */
+  width: 90%; /* Ancho limitado */
+  box-sizing: border-box;
 }
 
-/* Contenedor de cada enlace de red social */
+/* Media Queries para Tablets */
+@media (max-width: 1024px) {
+  .content-About {
+    flex-direction: row;
+    width: 100%;
+    padding: 0 3%; /* Padding general reducido */
+  }
+
+  .Profile {
+    padding-left: 3%;
+    max-width: 48%;
+  }
+
+  .Profile img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .Content-1A {
+    padding-right: 3%;
+    padding-top: 5%;
+    max-width: 52%;
+  }
+
+  .Description {
+    width: 95%;
+    font-size: clamp(15px, 1.6vw, 17px);
+  }
+
+  .btn-cv a {
+    padding: 10px 30px;
+    font-size: clamp(16px, 1.8vw, 22px);
+  }
+
+  .Redes {
+    right: 3%;
+    bottom: 20px;
+    width: 94%;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .Profile {
+    padding-left: 2%;
+    max-width: 48%;
+  }
+
+  .Content-1A {
+    padding-right: 2%;
+    padding-left: 2%;
+    max-width: 52%;
+  }
+
+  .Description {
+    width: 100%;
+    font-size: clamp(14px, 1.5vw, 16px);
+  }
+}
+
+/* Media Queries para Tablets pequeñas */
+@media (max-width: 768px) {
+  .about {
+    padding: 20px 15px; /* Padding uniforme y controlado */
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .content-About {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .Profile {
+    padding-left: 0;
+    padding-top: 20px;
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .Profile img {
+    width: 85%;
+    max-width: 400px;
+  }
+
+  .Content-1A {
+    padding: 30px 15px 20px 15px;
+    width: 100%;
+    max-width: 100%;
+    order: 2;
+  }
+
+  .Description {
+    width: 100%;
+    text-align: center;
+    font-size: clamp(15px, 4vw, 16px);
+    padding: 0;
+    margin-top: -300px;
+  }
+
+  .btn-cv {
+    padding-top: 20px;
+    order: 3;
+  }
+
+  .btn-cv a {
+    padding: 10px 25px;
+    font-size: clamp(16px, 4vw, 20px);
+    width: auto;
+  }
+
+  /* Redes en móvil - posición centrada */
+  .Redes {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    padding: 25px 0 20px 0;
+    width: 100%;
+    order: 4;
+  }
+}
+
+/* Media Queries para Móviles */
+@media (max-width: 480px) {
+  .about {
+    padding: 15px 10px;
+  }
+
+  .Profile img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .Content-1A {
+    padding: 20px 10px 15px 10px;
+  }
+
+  .Description {
+    font-size: clamp(14px, 4vw, 15px);
+    line-height: 1.5;
+    margin-top: -230px;
+  }
+
+  .btn-cv {
+    padding-top: 15px;
+  }
+
+  .btn-cv a {
+    padding: 8px 20px;
+    font-size: clamp(14px, 4vw, 18px);
+  }
+
+  /* Redes en móvil pequeño */
+  .Redes {
+    gap: 20px;
+    margin-top: 60px;
+    padding: 20px 0;
+  }
+
+  .Redes a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .Redes img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Mantén los estilos de animación para redes (sin cambios) */
 .Redes a {
   display: inline-flex;
   align-items: center;
@@ -142,9 +332,9 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Efecto de brillo en el fondo */
 .Redes a::before {
   content: "";
   position: absolute;
@@ -161,7 +351,6 @@
   transition: opacity 0.3s ease;
 }
 
-/* Efecto de pulso sutil */
 @keyframes pulseGlow {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
@@ -178,7 +367,6 @@
   animation: pulseGlow 3s infinite;
 }
 
-/* Efecto hover completo */
 .Redes a:hover {
   transform: translateY(-5px) scale(1.1);
   background: rgba(255, 255, 255, 0.2);
@@ -190,7 +378,6 @@
   opacity: 1;
 }
 
-/* Estilos para las imágenes de redes */
 .Redes img {
   width: 24px;
   height: 24px;
@@ -204,9 +391,7 @@
   transform: scale(1.2);
 }
 
-/* Efectos específicos para cada red social */
 .Redes a:nth-child(1):hover {
-  /* Instagram */
   background: linear-gradient(
     45deg,
     #405de6,
@@ -223,306 +408,16 @@
 }
 
 .Redes a:nth-child(2):hover {
-  /* Twitter/X */
   background: #000000;
 }
 
 .Redes a:nth-child(3):hover {
-  /* GitHub */
   background: #333333;
 }
 
-/* Efecto de clic */
 .Redes a:active {
   transform: translateY(-2px) scale(0.95);
   transition: transform 0.1s ease;
-}
-
-/* Media Queries para Responsive */
-@media (max-width: 1200px) {
-  .content-About h1 {
-    font-size: 3.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .content-About {
-    padding: 0 15px;
-  }
-
-  .content-About h1 {
-    font-size: 2rem;
-    letter-spacing: -0.5px;
-  }
-
-  /* Reducir blur en móviles para mejor rendimiento */
-  .about::before {
-    filter: blur(4px);
-    transform: scale(1.02);
-  }
-}
-
-@media (max-width: 480px) {
-  .content-About {
-    padding: 0 10px;
-  }
-
-  .content-About h1 {
-    font-size: 2.5rem;
-    letter-spacing: -0.3px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.3),
-      0 0 15px rgba(255, 255, 255, 0.1);
-  }
-}
-
-@media (max-width: 1024px) {
-  .content-About {
-    flex-direction: row;
-  }
-
-  .Profile {
-    padding-left: 50px;
-    justify-content: flex-start;
-  }
-
-  .Profile img {
-    width: 450px;
-    height: 500px;
-  }
-
-  .Content-1A {
-    padding-right: 50px;
-    padding-top: 80px;
-  }
-
-  .Description {
-    max-width: 600px;
-    font-size: 17px;
-  }
-
-  .btn-cv a {
-    padding: 10px 35px;
-    font-size: 22px;
-  }
-
-  .Redes {
-    right: 0;
-    bottom: 20px;
-    padding-right: 50px;
-  }
-}
-
-@media (max-width: 900px) {
-  .Profile {
-    padding-left: 30px;
-  }
-
-  .Profile img {
-    width: 400px;
-    height: 450px;
-  }
-
-  .Content-1A {
-    padding-right: 30px;
-  }
-
-  .Description {
-    max-width: 500px;
-    font-size: 16px;
-  }
-}
-
-/* Media Queries para móviles */
-@media (max-width: 768px) {
-  .about {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    justify-content: flex-start;
-  }
-
-  .content-About {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .Profile {
-    padding-left: 0;
-    padding-top: 20px;
-    order: 1;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .Profile img {
-    width: 350px;
-    height: 400px;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .Content-1A {
-    padding-right: 0;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    order: 2;
-    flex-direction: column;
-  }
-
-  .Description {
-    max-width: 90%;
-    text-align: center;
-    font-size: 16px;
-    padding: 0 15px;
-    margin-top: 15px;
-  }
-
-  .btn-cv {
-    padding-top: 20px;
-    order: 3;
-  }
-
-  .btn-cv a {
-    padding: 10px 30px;
-    font-size: 20px;
-  }
-
-  /* Redes en móvil - posición centrada */
-  .Redes {
-    position: static;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 40px;
-    padding: 25px 0 20px 0;
-    width: 100%;
-    order: 4;
-  }
-
-  /* Línea decorativa arriba de las redes en móvil */
-
-  /* Ajustes específicos para móvil */
-  .Redes a {
-    width: 40px;
-    height: 40px;
-    animation: pulseGlow 4s infinite;
-  }
-
-  .Redes img {
-    width: 20px;
-    height: 20px;
-  }
-
-  /* Efecto hover más suave en móvil */
-  .Redes a:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2),
-      0 0 15px rgba(255, 255, 255, 0.05);
-  }
-}
-
-@media (max-width: 480px) {
-  .about {
-    padding: 15px;
-    min-height: auto;
-  }
-
-  .content-About {
-    padding: 0;
-  }
-
-  .Profile {
-    padding-top: 10px;
-  }
-
-  .Profile img {
-    width: 280px;
-    height: 320px;
-  }
-
-  .Content-1A {
-    padding-top: 20px;
-    padding-bottom: 15px;
-  }
-
-  .Description {
-    font-size: 15px;
-    line-height: 1.5;
-    max-width: 95%;
-    margin-top: 10px;
-  }
-
-  .btn-cv {
-    padding-top: 15px;
-  }
-
-  .btn-cv a {
-    padding: 8px 25px;
-    font-size: 18px;
-  }
-
-  /* Efectos específicos para móvil */
-  .btn-cv a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-
-  .btn-cv a:active {
-    transform: translateY(0);
-  }
-
-  /* Redes en móvil pequeño */
-  .Redes {
-    gap: 20px;
-    margin-top: 30px;
-    padding-top: 20px;
-  }
-
-  .Redes a {
-    width: 38px;
-    height: 38px;
-  }
-
-  .Redes img {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-@media (max-width: 360px) {
-  .Profile img {
-    width: 250px;
-    height: 280px;
-  }
-
-  .Description {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-
-  .btn-cv a {
-    padding: 8px 20px;
-    font-size: 16px;
-  }
-
-  .Redes {
-    gap: 15px;
-  }
-
-  .Redes a {
-    width: 36px;
-    height: 36px;
-  }
-
-  .Redes img {
-    width: 16px;
-    height: 16px;
-  }
 }
 
 @font-face {
