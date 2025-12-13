@@ -10,78 +10,117 @@
   overflow-x: hidden;
 }
 
-.content {
+.Conten-1P {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 150px;
+}
+.Conten-1P h2,
+.Conten-2P h2 {
+  color: white;
+  margin-left: 140px;
+  font-family: "Hagrid", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  margin-bottom: -40px;
+}
+.contenido-1P,
+.contenido-2P {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  padding: 0 20px;
+  text-align: left;
+  margin: 20px;
+  padding: 20px;
+  color: white;
+}
+.contenido-1P p,
+.contenido-2P p {
+  font-size: 18px;
+  line-height: 1.6;
+  width: 600px;
+  height: auto;
+  margin-left: 100px;
+}
+.contenido-1P img {
+  width: 150px;
+  height: 150px;
+  margin-left: 200px;
+  border-radius: 10px;
 }
 
-.content h1 {
-  font-family: "Hagrid", sans-serif;
-  color: #ffffff;
-  font-size: 4rem;
-  font-weight: 800;
-  text-align: center;
-  letter-spacing: -1px;
-
-  /* Efectos de sombra */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2),
-    0 8px 16px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 255, 255, 0.1);
-
-  /* Transición suave para hover */
-  transition: all 0.3s ease;
+.Conten-2P {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.contenido-2P img {
+  width: 300;
+  height: 60px;
+  margin-left: 200px;
+  border-radius: 10px;
 }
 
-/* Efecto hover opcional */
-.content h1:hover {
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.3),
-    0 12px 24px rgba(0, 0, 0, 0.2), 0 0 40px rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
+.link-1P {
+  margin-left: 160px;
 }
 
-/* Media Queries para Responsive */
-@media (max-width: 1200px) {
-  .content h1 {
-    font-size: 3.5rem;
-  }
+/* From Uiverse.io by NAKAMOZ */
+.link-1P a {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+  z-index: 3;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
-@media (max-width: 768px) {
-  .content {
-    padding: 0 15px;
-  }
-
-  .content h1 {
-    font-size: 2rem;
-    letter-spacing: -0.5px;
-
-    /* Ajustar sombras para móvil */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3),
-      0 0 20px rgba(255, 255, 255, 0.1);
-  }
+.link-1P a::before {
+  content: "";
+  border: 3px solid white;
+  position: absolute;
+  left: -25px;
+  bottom: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
-@media (max-width: 480px) {
-  .content {
-    padding: 0 10px;
-  }
-
-  .content h1 {
-    font-size: 2.5rem;
-    letter-spacing: -0.3px;
-
-    /* Sombra más sutil para móvil */
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.3),
-      0 0 15px rgba(255, 255, 255, 0.1);
-  }
+.link-1P a:hover::before {
+  left: -25px;
+  bottom: -17.5px;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  z-index: -1;
 }
 
-@media (max-width: 360px) {
-  .content h1 {
-    font-size: 2rem;
-  }
+.link-1P a:hover {
+  color: #282828;
 }
 
 @font-face {

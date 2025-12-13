@@ -1,5 +1,5 @@
 .about {
-  position: relative; /* Necesario para el pseudo-elemento */
+  position: relative;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -7,13 +7,13 @@
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  background: none; /* Removemos el background del contenedor principal */
+  background: none;
 }
 
 /* Pseudo-elemento para el fondo con blur */
 .about::before {
   content: "";
-  position: fixed; /* Fijamos el fondo */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -21,12 +21,12 @@
   background: url("../assets/background/bosque.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  filter: blur(8px); /* Ajusta este valor para más/menos blur */
-  z-index: -1; /* Envía el fondo detrás del contenido */
-  transform: scale(1.05); /* Ayuda a cubrir bordes del blur */
+  filter: blur(8px);
+  z-index: -1;
+  transform: scale(1.05);
 }
 
-/* Si quieres agregar una capa oscura sobre el blur para mejor legibilidad */
+/* Capa oscura sobre el blur para mejor legibilidad */
 .about::after {
   content: "";
   position: fixed;
@@ -34,8 +34,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Oscurece el fondo para mejor contraste */
-  z-index: -1; /* Detrás del contenido pero sobre el blur */
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* CONTENEDOR PRINCIPAL - DESKTOP */
+.content-About {
+  display: flex;
+  flex: 1;
+  width: 100%;
 }
 
 .Profile {
@@ -43,6 +50,7 @@
   justify-content: center;
   align-items: center;
   padding-left: 171px;
+  flex: 1;
 }
 
 .Profile img {
@@ -51,13 +59,15 @@
   object-fit: cover;
 }
 
-.Content-1 {
+.Content-1A {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-right: 93px;
   padding-top: 100px;
+  flex: 1;
+  position: relative; /* Para posicionar las redes */
 }
 
 .Description {
@@ -86,71 +96,178 @@
   color: white;
   border-radius: 10px;
   background: #165b74;
-  text-decoration: none; /* Quita la línea del enlace */
+  text-decoration: none;
   display: inline-block;
-  transition: all 0.3s ease; /* Transición suave para efectos */
+  transition: all 0.3s ease;
   cursor: pointer;
-  border: 2px solid transparent; /* Borde transparente para efecto hover */
+  border: 2px solid transparent;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Efectos para el enlace */
 .btn-cv a:hover {
-  background: #1d6f8b; /* Color más claro al pasar el mouse */
-  transform: translateY(-3px); /* Efecto de levantar */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra al pasar el mouse */
-  border-color: rgba(255, 255, 255, 0.2); /* Borde sutil */
+  background: #1d6f8b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .btn-cv a:active {
-  transform: translateY(-1px); /* Efecto al hacer clic */
+  transform: translateY(-1px);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* ESTILOS PARA REDES SOCIALES - DESKTOP */
 .Redes {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end; /* Alinea a la derecha */
+  align-items: center;
+  justify-content: flex-end;
   gap: 20px;
-  padding-top: 30px;
-  position: absolute; /* Posiciona absolutamente */
-  bottom: 30px; /* Lo coloca en la parte inferior */
-  right: 93px; /* Lo coloca a la derecha con el mismo padding que Content-1 */
-  width: auto;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  width: 100%;
+  padding-right: 93px;
 }
 
-.Redes a:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 255, 255, 0.05);
+/* Contenedor de cada enlace de red social */
+.Redes a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Efecto de brillo en el fondo */
+.Redes a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Efecto de pulso sutil */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.Redes a {
+  animation: pulseGlow 3s infinite;
+}
+
+/* Efecto hover completo */
+.Redes a:hover {
+  transform: translateY(-5px) scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.1);
+  animation: none;
+}
+
+.Redes a:hover::before {
+  opacity: 1;
+}
+
+/* Estilos para las imágenes de redes */
+.Redes img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.Redes a:hover img {
+  transform: scale(1.2);
+}
+
+/* Efectos específicos para cada red social */
+.Redes a:nth-child(1):hover {
+  /* Instagram */
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d,
+    #f56040,
+    #f77737,
+    #fcaf45,
+    #ffdc80
+  );
+}
+
+.Redes a:nth-child(2):hover {
+  /* Twitter/X */
+  background: #000000;
+}
+
+.Redes a:nth-child(3):hover {
+  /* GitHub */
+  background: #333333;
+}
+
+/* Efecto de clic */
 .Redes a:active {
   transform: translateY(-2px) scale(0.95);
   transition: transform 0.1s ease;
 }
+
 /* Media Queries para Responsive */
 @media (max-width: 1200px) {
-  .content h1 {
+  .content-About h1 {
     font-size: 3.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .content {
+  .content-About {
     padding: 0 15px;
   }
 
-  .content h1 {
+  .content-About h1 {
     font-size: 2rem;
     letter-spacing: -0.5px;
+  }
+
+  /* Reducir blur en móviles para mejor rendimiento */
+  .about::before {
+    filter: blur(4px);
+    transform: scale(1.02);
   }
 }
 
 @media (max-width: 480px) {
-  .content {
+  .content-About {
     padding: 0 10px;
   }
 
-  .content h1 {
+  .content-About h1 {
     font-size: 2.5rem;
     letter-spacing: -0.3px;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.3),
@@ -159,6 +276,10 @@
 }
 
 @media (max-width: 1024px) {
+  .content-About {
+    flex-direction: row;
+  }
+
   .Profile {
     padding-left: 50px;
     justify-content: flex-start;
@@ -169,7 +290,7 @@
     height: 500px;
   }
 
-  .Content-1 {
+  .Content-1A {
     padding-right: 50px;
     padding-top: 80px;
   }
@@ -183,6 +304,12 @@
     padding: 10px 35px;
     font-size: 22px;
   }
+
+  .Redes {
+    right: 0;
+    bottom: 20px;
+    padding-right: 50px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -195,7 +322,7 @@
     height: 450px;
   }
 
-  .Content-1 {
+  .Content-1A {
     padding-right: 30px;
   }
 
@@ -205,39 +332,148 @@
   }
 }
 
-@media (max-width: 480px) {
-  .content {
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+  .about {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    padding: 20px;
+    justify-content: flex-start;
+  }
+
+  .content-About {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .Profile {
+    padding-left: 0;
+    padding-top: 20px;
+    order: 1;
+    width: 100%;
+    justify-content: center;
   }
 
   .Profile img {
-    display: flex;
+    width: 350px;
+    height: 400px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .Content-1A {
+    padding-right: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    order: 2;
     flex-direction: column;
+  }
+
+  .Description {
+    max-width: 90%;
+    text-align: center;
+    font-size: 16px;
+    padding: 0 15px;
+    margin-top: 15px;
+  }
+
+  .btn-cv {
+    padding-top: 20px;
+    order: 3;
+  }
+
+  .btn-cv a {
+    padding: 10px 30px;
+    font-size: 20px;
+  }
+
+  /* Redes en móvil - posición centrada */
+  .Redes {
+    position: static;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    padding: 25px 0 20px 0;
+    width: 100%;
+    order: 4;
+  }
+
+  /* Línea decorativa arriba de las redes en móvil */
+  .Redes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+  }
+
+  /* Ajustes específicos para móvil */
+  .Redes a {
+    width: 40px;
+    height: 40px;
+    animation: pulseGlow 4s infinite;
+  }
+
+  .Redes img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Efecto hover más suave en móvil */
+  .Redes a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2),
+      0 0 15px rgba(255, 255, 255, 0.05);
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 15px;
+    min-height: auto;
+  }
+
+  .content-About {
+    padding: 0;
+  }
+
+  .Profile {
+    padding-top: 10px;
+  }
+
+  .Profile img {
     width: 280px;
     height: 320px;
   }
 
-  .Content-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0px;
-    position: relative;
+  .Content-1A {
+    padding-top: 20px;
+    padding-bottom: 15px;
   }
 
   .Description {
     font-size: 15px;
-    text-align: center;
     line-height: 1.5;
     max-width: 95%;
-    padding: 10px;
+    margin-top: 10px;
   }
 
   .btn-cv {
-    padding-top: 25px;
+    padding-top: 15px;
   }
 
   .btn-cv a {
@@ -247,24 +483,60 @@
 
   /* Efectos específicos para móvil */
   .btn-cv a:hover {
-    transform: translateY(-2px); /* Efecto más suave en móvil */
+    transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
 
   .btn-cv a:active {
-    transform: translateY(0); /* Menos movimiento en móvil */
+    transform: translateY(0);
   }
+
+  /* Redes en móvil pequeño */
   .Redes {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centra los iconos */
     gap: 20px;
-    position: static; /* Cambia de absolute a static para flujo normal */
-    bottom: auto; /* Quita posicionamiento absoluto */
-    right: auto; /* Quita posicionamiento absoluto */
-    margin-top: 30px; /* Espacio arriba */
-    padding-top: 20px; /* Espacio interno arriba */
-    width: 100%; /* Ocupa todo el ancho */
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+
+  .Redes a {
+    width: 38px;
+    height: 38px;
+  }
+
+  .Redes img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .Profile img {
+    width: 250px;
+    height: 280px;
+  }
+
+  .Description {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .btn-cv a {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+
+  .Redes {
+    gap: 15px;
+  }
+
+  .Redes a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .Redes img {
+    width: 16px;
+    height: 16px;
   }
 }
 

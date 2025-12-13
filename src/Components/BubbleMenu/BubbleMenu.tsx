@@ -41,28 +41,28 @@ const DEFAULT_ITEMS: MenuItem[] = [
   },
   {
     label: "about",
-    href: "/about", // ✅ Ruta correcta
+    href: "/about",
     ariaLabel: "About",
     rotation: 8,
     hoverStyles: { bgColor: "#10b981", textColor: "#ffffff" },
   },
   {
     label: "projects",
-    href: "/projects", // ✅ Ruta correcta
+    href: "/projects",
     ariaLabel: "Projects",
     rotation: 8,
     hoverStyles: { bgColor: "#f59e0b", textColor: "#ffffff" },
   },
   {
     label: "blog",
-    href: "/blog", // ✅ Ruta correcta
+    href: "/blog",
     ariaLabel: "Blog",
     rotation: 8,
     hoverStyles: { bgColor: "#ef4444", textColor: "#ffffff" },
   },
   {
     label: "contact",
-    href: "/contact", // ✅ Ruta correcta
+    href: "/contact",
     ariaLabel: "Contact",
     rotation: -8,
     hoverStyles: { bgColor: "#8b5cf6", textColor: "#ffffff" },

@@ -57,11 +57,11 @@ function About() {
         animationDuration={0.5}
         staggerDelay={0.12}
       />
-      <div className="content">
+      <div className="content-About">
         <div className="Profile">
           <img src={foto} alt="Hector Cortes" />
         </div>
-        <div className="Content-1">
+        <div className="Content-1A">
           <div className="Description">
             <p>
               Soy Hector Cortes, Programador Developer mobile y Diseñador UI &

@@ -1,5 +1,7 @@
 import "../css/Projects.css";
 import BubbleMenu from "../Components/BubbleMenu/BubbleMenu";
+import barrio from "../assets/img/projects/Logo.webp";
+import crita from "../assets/img/projects/Cristavissioon.webp";
 
 function Projects() {
   const items = [
@@ -52,8 +54,45 @@ function Projects() {
         animationDuration={0.5}
         staggerDelay={0.12}
       />
-      <div className="content">
-        <h1>Proximamente</h1>
+      <div className="content-projects">
+        <div className="Conten-1P">
+          <h2>Hotdogs & Harmburguesas para el barrio</h2>
+          <div className="contenido-1P">
+            <p>
+              Landing Page con React + Vite, con una solución web de alto
+              rendimiento diseñada para un negocio local de comida rápida.
+              Desarrollada con React, Vite y TypeScript, la interfaz prioriza la
+              usabilidad móvil e incluye una galería interactiva de productos.
+              Integra la API de WhatsApp para canalizar pedidos directamente y
+              la API de Google Maps para geolocalización.
+            </p>
+            <img src={barrio} alt="Proyecto 1" />
+          </div>
+          <div className="link-1P">
+            <a href="https://hotdogs-harmburguesas.netlify.app/">
+              Ver Proyecto
+            </a>
+          </div>
+        </div>
+        <div className="Conten-2P">
+          <h2>Cristavicionn</h2>
+          <div className="contenido-2P">
+            <p>
+              Landing Page con React + Vite, con una solución web de alto
+              rendimiento diseñada para un negocio local de comida rápida.
+              Desarrollada con React, Vite y TypeScript, la interfaz prioriza la
+              usabilidad móvil e incluye una galería interactiva de productos.
+              Integra la API de WhatsApp para canalizar pedidos directamente y
+              la API de Google Maps para geolocalización.
+            </p>
+            <img src={crita} alt="Proyecto 2" />
+          </div>
+          <div className="link-1P">
+            <a href="https://hotdogs-harmburguesas.netlify.app/">
+              Ver Proyecto
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

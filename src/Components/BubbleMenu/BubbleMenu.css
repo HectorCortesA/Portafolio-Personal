@@ -186,8 +186,9 @@
   width: 100%;
   min-height: var(--pill-min-h);
   padding: clamp(1.5rem, 3vw, 8rem) 0;
-  font-size: clamp(1.5rem, 4vw, 4rem);
-  font-weight: 400;
+  font-size: clamp(3rem, 4vw, 3rem);
+  font-family: "Hagrid", sans-serif;
+  font-weight: 800;
   line-height: 0;
   border-radius: 999px;
   background: var(--pill-bg);
@@ -261,4 +262,13 @@
   .bubble-menu-items .pill-link:active {
     transform: scale(0.94);
   }
+}
+
+@font-face {
+  font-family: "Hagrid";
+  src: url("../assets/fonts/hagrid/Hagrid-Extrabold-Italic.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
 }
