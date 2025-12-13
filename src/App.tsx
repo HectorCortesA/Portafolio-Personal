@@ -4,6 +4,7 @@ import UI from "./pages/UI.tsx";
 import About from "./pages/About.tsx";
 import Projects from "./pages/Projects.tsx";
 import Contact from "./pages/contact.tsx";
+import Mantenimiento from "./pages/Error.tsx";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/Mantenimiento" element={<Mantenimiento />} />
       </Routes>
     </div>
   );

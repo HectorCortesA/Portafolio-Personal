@@ -19,7 +19,8 @@
 }
 .Conten-1P h2,
 .Conten-2P h2 {
-  color: white;
+  color: #acddec;
+  text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.25);
   margin-left: 140px;
   font-family: "Hagrid", sans-serif;
   font-weight: 800;
@@ -39,6 +40,8 @@
 }
 .contenido-1P p,
 .contenido-2P p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
   width: 600px;
@@ -80,6 +83,8 @@
   text-transform: uppercase;
   text-decoration: none;
   font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   position: relative;
   z-index: 3;
   transition: 0.5s;
@@ -125,14 +130,6 @@
 
 @font-face {
   font-family: "Hagrid";
-  src: url("../assets/fonts/hagrid/Hagrid-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Hagrid";
   src: url("../assets/fonts/hagrid/Hagrid-Italic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
@@ -141,17 +138,16 @@
 
 @font-face {
   font-family: "Hagrid";
-  src: url("../assets/fonts/hagrid/Hagrid-Extrabold.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Hagrid";
   src: url("../assets/fonts/hagrid/Hagrid-Extrabold-Italic.ttf")
     format("truetype");
   font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: italic;
   font-display: swap;
 }

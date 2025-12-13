@@ -69,9 +69,7 @@ function Projects() {
             <img src={barrio} alt="Proyecto 1" />
           </div>
           <div className="link-1P">
-            <a href="https://hotdogs-harmburguesas.netlify.app/">
-              Ver Proyecto
-            </a>
+            <a href="https://bulliesburger.netlify.app/">Ver Proyecto</a>
           </div>
         </div>
         <div className="Conten-2P">
@@ -88,9 +86,7 @@ function Projects() {
             <img src={crita} alt="Proyecto 2" />
           </div>
           <div className="link-1P">
-            <a href="https://hotdogs-harmburguesas.netlify.app/">
-              Ver Proyecto
-            </a>
+            <a href="./Mantenimiento">Ver Proyecto</a>
           </div>
         </div>
       </div>

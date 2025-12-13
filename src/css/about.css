@@ -405,21 +405,6 @@
   }
 
   /* Línea decorativa arriba de las redes en móvil */
-  .Redes::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 2px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.5),
-      transparent
-    );
-  }
 
   /* Ajustes específicos para móvil */
   .Redes a {
