@@ -21,11 +21,10 @@
   padding-bottom: 30px;
 }
 .dates p {
-  font-family: "Hagrid", sans-serif;
-  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   font-size: 1rem;
   color: white;
-  letter-spacing: 2px;
   margin: 10px;
   padding-inline-start: 60px;
   padding-inline-end: 60px;
@@ -102,8 +101,8 @@
   padding-bottom: 30px;
 }
 .Pokedex p {
-  font-family: "Hagrid", sans-serif;
-  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   font-size: 1rem;
   color: white;
   letter-spacing: 2px;
@@ -177,8 +176,8 @@
   padding-bottom: 30px;
 }
 .Recetario p {
-  font-family: "Hagrid", sans-serif;
-  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   font-size: 1rem;
   color: white;
   letter-spacing: 2px;
@@ -247,12 +246,14 @@
   .Pokedex h1,
   .Recetario h1 {
     display: flex;
+
     justify-content: center !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     text-align: center;
-    padding-top: 80px; /* Ajusta según necesites */
-    padding-bottom: 20px;
+    padding-top: 100px; /* Ajusta según necesites */
+    padding-bottom: 10px;
+    font-size: 20px;
   }
 
   .dates p,
@@ -261,7 +262,15 @@
     padding-inline-start: 20px;
     padding-inline-end: 20px;
     text-align: center;
+    font-size: 14px;
   }
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {

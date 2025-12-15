@@ -84,7 +84,7 @@
   font-family: "Hagrid", sans-serif;
   font-weight: 400;
   color: #ffffff;
-  font-size: clamp(16px, 1.8vw, 18px); /* Tamaño responsivo */
+  font-size: 20px; /* Tamaño responsivo */
   line-height: 1.6;
   letter-spacing: 0.5px;
   margin-top: 20px;
@@ -169,7 +169,7 @@
 
   .Description {
     width: 95%;
-    font-size: clamp(15px, 1.6vw, 17px);
+    font-size: 18px;
   }
 
   .btn-cv a {
@@ -288,7 +288,7 @@
   }
 
   .Description {
-    font-size: clamp(14px, 4vw, 15px);
+    font-size: 14px;
     line-height: 1.5;
     margin-top: -230px;
   }

@@ -45,7 +45,7 @@
 .contenido-2P p {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.6;
   width: 600px;
   height: auto;
@@ -158,10 +158,6 @@
   font-display: swap;
 }
 
-/* ==================== */
-/* MEDIA QUERIES - RESPONSIVE */
-/* ==================== */
-
 /* TABLET: 768px a 1024px */
 @media screen and (max-width: 1024px) {
   .Conten-1P {
@@ -186,7 +182,7 @@
   .contenido-2P p {
     width: 450px;
     margin-left: 60px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
   }
 
@@ -241,7 +237,7 @@
     width: 90%;
     margin-left: 40px;
     margin-right: 40px;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.4;
     margin-bottom: 20px;
   }
@@ -267,78 +263,6 @@
   }
 }
 
-/* MÓVIL GRANDE: 480px a 600px */
-@media screen and (max-width: 600px) {
-  .projects {
-    min-height: auto;
-    padding-bottom: 50px;
-  }
-
-  .Conten-1P {
-    margin-top: 80px;
-  }
-
-  .Conten-1P h2,
-  .Conten-2P h2 {
-    margin-left: 20px;
-    font-size: 20px;
-    margin-bottom: -10px;
-    width: calc(100% - 40px);
-  }
-
-  .contenido-1P,
-  .contenido-2P {
-    margin: 0;
-    padding: 10px 20px;
-    width: calc(100% - 40px);
-  }
-
-  .contenido-1P p,
-  .contenido-2P p {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 14px;
-    line-height: 1.3;
-    margin-bottom: 15px;
-  }
-
-  .contenido-1P img {
-    width: 80px;
-    height: 80px;
-    margin-left: 100px;
-    align-self: center;
-  }
-
-  .contenido-2P img {
-    width: 180px;
-    height: 35px;
-    margin-left: 100px;
-    align-self: center;
-  }
-
-  .link-1P {
-    margin-left: 20px;
-
-    margin-top: 15px;
-    margin-bottom: 25px;
-  }
-
-  .link-1P a {
-    font-size: 14px;
-  }
-
-  .link-1P a::before {
-    left: -15px;
-  }
-
-  .link-1P a:hover::before {
-    left: -15px;
-    bottom: -12.5px;
-    padding: 15px;
-  }
-}
-
 /* MÓVIL PEQUEÑO: hasta 480px */
 @media screen and (max-width: 480px) {
   .Conten-1P {
@@ -348,7 +272,7 @@
   .Conten-1P h2,
   .Conten-2P h2 {
     margin-left: 25px;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 0;
   }
 
@@ -361,10 +285,12 @@
 
   .contenido-1P p,
   .contenido-2P p {
-    font-size: 13px;
-    line-height: 1.2;
-
-    margin-bottom: 10px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 15px;
   }
 
   .contenido-1P img {
@@ -421,7 +347,8 @@
   .contenido-2P img {
     width: 80px;
     height: 80px;
-    margin-left: 20px;
+    margin-left: 70px;
+    padding-bottom: 70px;
   }
 
   .contenido-2P img {
