@@ -256,6 +256,9 @@
   color: #282828;
 }
 
+.Conten-4P {
+  padding-bottom: 100px;
+}
 @font-face {
   font-family: "Hagrid";
   src: url("../assets/fonts/hagrid/Hagrid-Italic.ttf") format("truetype");

@@ -2,6 +2,7 @@ import "../css/Projects.css";
 import BubbleMenu from "../Components/BubbleMenu/BubbleMenu";
 import barrio from "../assets/img/projects/Logo.webp";
 import crita from "../assets/img/projects/Cristavissioon.webp";
+import one from "../assets/img/projects/logoone1.webp";
 
 function Projects() {
   const items = [
@@ -130,7 +131,7 @@ function Projects() {
               diriigo a emprendedores en el hambiente de restaurantes, uso de
               imganes de formato svg para optimizar la carga de la pagina
             </p>
-            <img src="" alt="Proyecto 3" />
+            <img src={one} alt="Proyecto 3" />
           </div>
           <div className="link-1P">
             <a href="https://onerestaurant.vercel.app/">Ver Proyecto</a>
@@ -156,7 +157,7 @@ function Projects() {
               con una interfaz sencilla y facil de usar, manejo de datos local y
               backup en archivos JSON.
             </p>
-            <img src="" alt="Proyecto 4" />
+            <img src={one} alt="Proyecto 4" />
           </div>
           <div className="link-1P">
             <a href="./Mantenimiento">Ver Proyecto</a>
