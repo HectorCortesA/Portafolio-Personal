@@ -57,6 +57,18 @@ function Projects() {
       <div className="content-projects">
         <div className="Conten-1P">
           <h2>Hotdogs & Harmburguesas para el barrio</h2>
+          <div className="content-skills">
+            <h3>Skills</h3>
+            <ul>
+              <li>React</li>
+              <li>Vite</li>
+              <li>TypeScript</li>
+              <li>SVG</li>
+              <li>Componentes React</li>
+              <li>API Whatasapp</li>
+              <li>API Google Maps</li>
+            </ul>
+          </div>
           <div className="contenido-1P">
             <p>
               Landing Page con React + Vite, con una solución web de alto
@@ -74,6 +86,16 @@ function Projects() {
         </div>
         <div className="Conten-2P">
           <h2>Cristavicionn</h2>
+          <div className="content-skills">
+            <h3>Skills</h3>
+            <ul>
+              <li>React</li>
+              <li>Vite</li>
+              <li>TypeScript</li>
+              <li>SVG</li>
+              <li>Componentes React</li>
+            </ul>
+          </div>
           <div className="contenido-2P">
             <p>
               Landing Page con React + Vite, con una solución web de alto
@@ -84,6 +106,57 @@ function Projects() {
               la API de Google Maps para geolocalización.
             </p>
             <img src={crita} alt="Proyecto 2" />
+          </div>
+          <div className="link-1P">
+            <a href="https://cristavisionn.vercel.app/">Ver Proyecto</a>
+          </div>
+        </div>
+
+        <div className="Conten-3P">
+          <h2>Lading page OneRestaurant</h2>
+          <div className="content-skills">
+            <h3>Skills</h3>
+            <ul>
+              <li>React</li>
+              <li>Vite</li>
+              <li>TypeScript</li>
+              <li>SVG</li>
+              <li>JSON</li>
+            </ul>
+          </div>
+          <div className="contenido-3P">
+            <p>
+              Landing page para la presentacion de un producto de sowftware,
+              diriigo a emprendedores en el hambiente de restaurantes, uso de
+              imganes de formato svg para optimizar la carga de la pagina
+            </p>
+            <img src="" alt="Proyecto 3" />
+          </div>
+          <div className="link-1P">
+            <a href="https://onerestaurant.vercel.app/">Ver Proyecto</a>
+          </div>
+        </div>
+        <div className="Conten-4P">
+          <h2>OneRestaurant App</h2>
+          <div className="content-skills">
+            <h3>Skills</h3>
+            <ul>
+              <li>Xcode</li>
+              <li>Swift UI</li>
+              <li>Figma</li>
+              <li>Core Data</li>
+              <li>JSON</li>
+            </ul>
+          </div>
+          <div className="contenido-4P">
+            <p>
+              App hecha para para emprededores en el hambiente de restaurantes,
+              con el fin de facilitar la gestion de sus negocios, con
+              funcionalidades como: gestion de productos, pedidos, ordenes, etc.
+              con una interfaz sencilla y facil de usar, manejo de datos local y
+              backup en archivos JSON.
+            </p>
+            <img src="" alt="Proyecto 4" />
           </div>
           <div className="link-1P">
             <a href="./Mantenimiento">Ver Proyecto</a>

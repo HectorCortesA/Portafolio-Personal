@@ -19,7 +19,9 @@
 }
 
 .Conten-1P h2,
-.Conten-2P h2 {
+.Conten-2P h2,
+.Conten-3P h2,
+.Conten-4P h2 {
   color: #acddec;
   text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.25);
   margin-left: 140px;
@@ -30,7 +32,9 @@
 }
 
 .contenido-1P,
-.contenido-2P {
+.contenido-2P,
+.contenido-3P,
+.contenido-4P {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -42,7 +46,9 @@
 }
 
 .contenido-1P p,
-.contenido-2P p {
+.contenido-2P p,
+.contenido-3P p,
+.contenido-4P p {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -74,6 +80,123 @@
   margin-left: 200px;
   border-radius: 10px;
 }
+.Conten-3P {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 60px;
+}
+
+.contenido-3P img {
+  width: 150px;
+  height: 150px;
+  margin-left: 200px;
+  border-radius: 10px;
+}
+.Conten-4P {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.contenido-4P img {
+  width: 150px;
+  height: 150px;
+  margin-left: 200px;
+  border-radius: 10px;
+}
+/* Diseño de lista h3 y ul li */
+.content-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.content-skills {
+  color: #acddec;
+  text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.25);
+  margin-left: 140px;
+  font-family: "Hagrid", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  margin-bottom: -40px;
+}
+
+.content-skills h3 {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f4f4f4;
+  margin: 0 0 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content-skills h3::after {
+  content: "";
+  flex: 1;
+  height: 0.5px;
+  background: currentColor;
+  opacity: 0.2;
+}
+
+.content-skills ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+}
+
+.content-skills li:nth-child(-n + 2) {
+  border-top: 0.5px solid rgba(255, 254, 254, 0.1);
+}
+
+.content-skills li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  color: white;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  font-weight: 300;
+  transition: padding-left 0.2s ease;
+}
+
+.content-skills li:first-child {
+  border-top: 0.5px solid rgba(142, 142, 142, 0.1);
+}
+
+.content-skills li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.35;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+}
+
+.content-skills li:hover {
+  padding-left: 6px;
+}
+
+.content-skills li:hover::before {
+  opacity: 1;
+}
+
+/* Diseño de btn de link */
 
 .link-1P {
   margin-left: 160px;
@@ -165,21 +288,26 @@
   }
 
   .Conten-1P h2,
-  .Conten-2P h2 {
+  .Conten-2P h2 .Conten-3P h2,
+  .Conten-4P h2 {
     margin-left: 80px;
     font-size: 24px;
     margin-bottom: -30px;
   }
 
   .contenido-1P,
-  .contenido-2P {
+  .contenido-2P,
+  .contenido-3P,
+  .contenido-4P {
     flex-direction: row;
     margin: 15px;
     padding: 15px;
   }
 
   .contenido-1P p,
-  .contenido-2P p {
+  .contenido-2P p,
+  .contenido-3P p,
+  .contenido-4P p {
     width: 450px;
     margin-left: 60px;
     font-size: 18px;
@@ -199,6 +327,31 @@
     margin-right: 100px;
     align-self: flex-end;
   }
+  .contenido-3P img {
+    width: 120px;
+    height: 120px;
+    margin-right: 100px;
+    align-self: flex-end;
+  }
+  .contenido-4P img {
+    width: 120px;
+    height: 120px;
+    margin-right: 100px;
+    align-self: flex-end;
+  }
+  .content-skills {
+    margin-left: 70px;
+    margin-top: 40px;
+    font-size: 24px;
+  }
+
+  .content-skills ul {
+    column-gap: 16px;
+  }
+
+  .content-skills li {
+    font-size: 13px;
+  }
 
   .link-1P {
     margin-left: 100px;
@@ -216,7 +369,9 @@
   }
 
   .Conten-1P h2,
-  .Conten-2P h2 {
+  .Conten-2P h2,
+  .Conten-3P h2,
+  .Conten-4P h2 {
     margin-left: 40px;
     font-size: 22px;
     margin-bottom: -20px;
@@ -225,7 +380,9 @@
   }
 
   .contenido-1P,
-  .contenido-2P {
+  .contenido-2P,
+  .contenido-3P,
+  .contenido-4P {
     flex-direction: column;
     margin: 10px;
     padding: 15px;
@@ -233,7 +390,9 @@
   }
 
   .contenido-1P p,
-  .contenido-2P p {
+  .contenido-2P p,
+  .contenido-3P p,
+  .contenido-4P p {
     width: 90%;
     margin-left: 40px;
     margin-right: 40px;
@@ -255,11 +414,53 @@
     margin-left: 40px;
     margin-top: 10px;
   }
+  .contenido-3P img {
+    width: 100px;
+    height: 100px;
+    margin-left: 40px;
+    margin-top: 10px;
+  }
+  .contenido-4P img {
+    width: 100px;
+    height: 100px;
+    margin-left: 40px;
+    margin-top: 10px;
+  }
+
+  .content-skills {
+    margin-left: 40px;
+    margin-right: 24px;
+    margin-top: 32px;
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  .content-skills ul {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    width: 100%;
+  }
+
+  .content-skills li:nth-child(-n + 2) {
+    border-top: 0.5px solid rgba(255, 254, 254, 0.1);
+  }
+
+  .content-skills li:first-child {
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .content-skills li {
+    font-size: 13px;
+    padding: 9px 0;
+  }
 
   .link-1P {
     margin-left: 40px;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 3px;
+  }
+  .Conten-4P {
+    margin-bottom: 120px;
   }
 }
 
@@ -270,21 +471,27 @@
   }
 
   .Conten-1P h2,
-  .Conten-2P h2 {
+  .Conten-2P h2,
+  .Conten-3P h2,
+  .Conten-4P h2 {
     margin-left: 25px;
     font-size: 20px;
     margin-bottom: 0;
   }
 
   .contenido-1P,
-  .contenido-2P {
+  .contenido-2P,
+  .contenido-3P,
+  .contenido-4P {
     padding: 5px 35px;
     width: calc(100% - 30px);
     box-sizing: border-box;
   }
 
   .contenido-1P p,
-  .contenido-2P p {
+  .contenido-2P p,
+  .contenido-3P p,
+  .contenido-4P p {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
@@ -302,9 +509,18 @@
     width: 150px;
     height: 30px;
   }
+  .contenido-3P img {
+    width: 70px;
+    height: 70px;
+  }
+  .contenido-4P img {
+    width: 70px;
+    height: 70px;
+  }
 
   .link-1P {
     margin-left: 25px;
+    padding-bottom: 30px;
   }
 
   .link-1P a {
